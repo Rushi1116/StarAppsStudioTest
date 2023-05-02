@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Customize Umbrella</title>
+    <link rel="stylesheet" type="text/css" href="umbrella.css">
+  </head>
+  <body>
+    <div class="customizer" style="background-color: #e1f5f9;">
+      <div class="row">
+        <div class="col">
+          <div class="umbrella-preview" style="position: relative;">
+            <img class="umbrella-preview__image" src="umbrella-blue.png" alt="Umbrella Preview">
+            <div id="umbrella-preview__spinner" class="spinner" style="display:none;">
+              <img src="loader_icon.svg" alt="Loading...">
+            </div>
+          </div>
+          <div class="logo-preview" style="display:none;">
+            <img id="logo-preview__image" src="#" alt="Logo Preview">
+          </div>
+        </div>
+        <div class="col">
+          <h1 style="font-size: 2.8rem; margin-top: 4rem;">Custom Umbrella</h1>
+          <div class="color-swatch">
+            <button class="color-swatch__button" data-color="#pink" style="background-color: #ff69b4;"
+              onclick="selectColor(this);"></button>
+            <button class="color-swatch__button" data-color="#blue" style="background-color: #39bdf6;"
+              onclick="selectColor(this);"></button>
+            <button class="color-swatch__button" data-color="#yellow" style="background-color: #ffcc00;"
+              onclick="selectColor(this);"></button>
+          </div>
+          <div style="font-size: 25px; font-weight: bold; margin-top: 1.2rem;">Customize your umbrella</div>
+          <div style="font-size: 21px;">Upload a logo for an instant preview.</div>
+          <div style="font-size: 15px; margin-top: 10px;">.png and .jpg files only. Max file size is 5MB.</div>
+          <div class="logo-upload" id="logo-upload" style="background-color: #39bdf6;"
+            onclick="document.getElementById('logo-upload__input').click();">
+            <div id="logo-upload__spinner" class="buttonSpinner" style="display:none;">
+              <img src="loader_icon.svg" alt="loader icon" class="spinner-icon">
+            </div>
+            <img src="upload_icon.svg" alt="upload icon" width="20" height="20" id="upload-icon">
+            <input type="file" accept="image/*" id="logo-upload__input" style="display:none;"
+              onchange="previewLogo(event);">
+            <label for="logo-upload__input" id="logo-upload__label">UPLOAD LOGO</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="umbrella.js"></script>
+  </body>
+</html>
